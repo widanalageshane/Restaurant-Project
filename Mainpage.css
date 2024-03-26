@@ -1,5 +1,10 @@
-/* navabar css */
+/* container css */
+.container-fluid {
+    background-color: black;
+}
 
+
+/* navabar css */
 .nav-link{
     color: #BFA437;
 }
@@ -9,8 +14,8 @@
 
 .carousel-item img{
     height: 40rem;
-    
 }
+
 
 .carousel-item::before {
     content: "";
@@ -19,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay opacity as needed */
+    background-color: rgba(0, 0, 0, 0.6); 
 }
 
 .carousel-caption {
@@ -37,3 +42,4 @@
     font-size:200%;
     letter-spacing: 3px;
 }
+
