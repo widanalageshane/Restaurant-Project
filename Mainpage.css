@@ -1,3 +1,9 @@
+/* backgroun css */
+body{
+    background-color: black;
+}
+
+
 /* container css */
 .container-fluid {
     background-color: black;
@@ -45,11 +51,13 @@
 
 /* cards css */
 
-.col p-2{
-
+.p-3{
+   color: white;
+   background-repeat: no-repeat;
+   background-size: cover;
+ 
     
 }
-
 
 
 
