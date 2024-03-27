@@ -19,15 +19,16 @@ body {
 
 /* background image CSS */
 .background-image {
-    background-image: url("../Images/Background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 560px;
-    width: 100%;
-    position: relative;
-    z-index: 1;
+  background-image: url("../Images/FEEDBACK.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Adjusted to fill the 75% viewport height */
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
+
 
 
 /* Feedback headding*/
