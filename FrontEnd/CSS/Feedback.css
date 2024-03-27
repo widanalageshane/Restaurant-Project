@@ -7,9 +7,9 @@ body {
     background-color:black;
     color:#BFA437;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     /*change the color of hover*/
-    transition: 0.s;
+    
     
 }
 
@@ -18,7 +18,30 @@ body {
 }
 
 /* background image CSS */
- .background-image {
-  height: 550px; /* Adjust the height as per your requirement */
-  overflow: hidden; /* This is optional, used to prevent image overflow */
- }
+.background-image {
+    background-image: url("../Images/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 560px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Feedback headding*/
+.background-image .content {
+  position: absolute; /* Position the content absolutely within the container */
+  top: 25%; /* Position the content vertically centered */
+  left: 50%; /* Position the content horizontally centered */
+  transform: translate(-50%, -50%); /* Adjust the position to center */
+  color: white; /* Set the color of the text */
+  text-align: center; /* Center-align the text */
+}
+
+.background-image .content h1 {
+  font-size: 3rem; /* Adjust the font size as needed */
+  font: inter; /* Set the font family */
+  margin: 0; /* Remove any default margin */
+}
