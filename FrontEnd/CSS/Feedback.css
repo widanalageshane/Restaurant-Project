@@ -18,13 +18,15 @@ body {
 }
 
 /* background image CSS */
-.background-image {
+.background-img{
+  padding: 0;
   background-image: url("../Images/FEEDBACK.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   /* Adjusted to fill the 75% viewport height */
   width: 100%;
+  height: 25%;
   position: relative;
   z-index: 1;
 }
@@ -32,9 +34,9 @@ body {
 
 
 /* Feedback headding*/
-.background-image .content {
+.background-img .content {
   position: absolute; /* Position the content absolutely within the container */
-  top: 25%; /* Position the content vertically centered */
+  top: 20%; /* Position the content vertically centered */
   left: 50%; /* Position the content horizontally centered */
   transform: translate(-50%, -50%); /* Adjust the position to center */
   color: white; /* Set the color of the text */
@@ -46,3 +48,43 @@ body {
   font: inter; /* Set the font family */
   margin: 0; /* Remove any default margin */
 }
+
+
+/* Feedback form */
+.container {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Feedback text */
+.feedback-form-container {
+  width: 60%;
+  height: 65px;
+  padding: 30px;
+  margin: 40px;
+  background: rgba(9, 9, 9, 0.97);
+  border: 1px solid rgb(14, 13, 13);
+  border-radius: 30px;
+  /* Center the form */ 
+  display: flex;
+  align-items: center;
+}
+
+#submit-button {
+  background-color:#3A2B26;
+  height: 65px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+ 
+
