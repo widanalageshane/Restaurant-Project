@@ -1,34 +1,22 @@
-
-
 /* backgroun css */
-
 body{
     background-color: black;
 }
 
-
 /* container css */
-
 .container-fluid {
     background-color: black;
 }
 
-
 /* navabar css */
-
 .nav-link{
     color:#c49b63;
 }
 
-
-
-
 /* carousel css */
-
 .carousel-item img{
     height: 40rem;
 }
-
 
 .carousel-item::before {
     content: "";
@@ -45,22 +33,32 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.9) ;
+    color: rgba(255, 255, 255, 0.9);
     text-align: center;
     font-size: xx-large;
     white-space: nowrap;
     font-family: 'Josefin Sans', sans-serif;
-  
+    align-items: center;
 }
+
+
+
 
 .carousel-caption h2{
     font-size:200%;
     letter-spacing: 3px;
-   
 }
 
-/* cards css */
+  @media (max-width: 576px) {
+    .display-3{
+      font-size: 1.5rem !important;
+    }
+  }
 
+
+  
+
+/* cards css */
 .p-3{
    color: rgb(0, 0, 0);
    text-decoration: solid;
@@ -78,17 +76,13 @@ h2{
     margin-top: 0;
 }
 
-
-
-
 /* menusummary css */
-
 .mainmenu{
     color: white;
 } 
 
 .col-sm{
-    /* border: 1px solid rgba(255, 255, 255, 0.3);  */
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
     z-index: 1;
 }
 
@@ -99,13 +93,23 @@ h2{
 }
 
 .menuphoto{
-    margin-top: -15%;
+    margin-top: -5%;
+}
+
+.menuphoto img{
+    max-width: 60%; 
+   
+
+}
+
+.topimage{
+    z-index: 1;
 }
 
 
 
-/* footer css */
 
+/* footer css */
 .footer-nav{
     color: #c49b63;
 }
@@ -116,13 +120,8 @@ h2{
 }
 
 .footer-nav .nav-link,
-.footer-nav P,
 .footer-nav p {
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     opacity: 90%;
     font-size: smaller;
 }
-
-
-
-
