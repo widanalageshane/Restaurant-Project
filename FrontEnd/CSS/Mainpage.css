@@ -8,9 +8,22 @@ body{
     background-color: black;
 }
 
+.containertop {
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+}
+
 /* navabar css */
 .nav-link{
     color:#c49b63;
+}
+
+
+.navbartop {
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
 }
 
 /* carousel css */
@@ -42,16 +55,10 @@ body{
 }
 
 
-
-
-.carousel-caption h2{
-    font-size:200%;
-    letter-spacing: 3px;
-}
-
   @media (max-width: 576px) {
     .display-3{
       font-size: 1.5rem !important;
+      margin-left: -1.1em;
     }
   }
 
