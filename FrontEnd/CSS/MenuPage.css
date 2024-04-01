@@ -36,9 +36,18 @@ body{
 
 .nav-link:hover{
     color: #c97b50;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
     margin-top: 30px;
+}
+
+.fa-user {
+    font-size: 1.58rem;
+    margin-bottom: 30px;
+    margin-left: 9px;
+    margin-top: 30px;
+    margin-right: 20px;
+
 }
 
 .img {
