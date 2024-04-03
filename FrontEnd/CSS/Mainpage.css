@@ -16,7 +16,8 @@ body{
 
 /* navabar css */
 .nav-link{
-    color:#c49b63;
+    color: #BFA437;
+   
 }
 
 
@@ -24,6 +25,10 @@ body{
     position: sticky;
     top: 0; 
     z-index: 1000; 
+}
+
+.nav-link:hover{
+    color: #c97b50;
 }
 
 /* carousel css */
