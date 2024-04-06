@@ -30,22 +30,22 @@ body{
 .nav-link{
     color: #BFA437;
     font-size: 1.3rem;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .nav-link:hover{
     color: #c97b50;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .fa-user {
-    font-size: 1.58rem;
-    margin-bottom: 30px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
     margin-left: 9px;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-right: 20px;
 
 }
@@ -180,19 +180,28 @@ body{
 /* Menu page - footer CSS */
  
 
+.footer {
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+}
+
 .details{
-    line-height: 220%;
+    line-height: 20%;
     color: #BFA437;
-    margin-bottom: 40px;
-    text-align:left; 
+    margin-bottom: 00px;
+    
 
 }
 .col-4 {
-    text-align: center;
+    text-align: top;
     color: #BFA437;
     opacity: 95%;
-    margin-top: 10px;
-    font-size: 1.15rem;
+    margin-top: 00 px;
+    font-size: 1.15em;
 
 }
 
