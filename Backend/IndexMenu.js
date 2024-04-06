@@ -8,8 +8,8 @@ const app = express();
 app.use(cors());
 
 app.use('/', menuRouter);
-
-
+//app.use('/add', menuRouter);
+app.use(express.json())
 
 
 
