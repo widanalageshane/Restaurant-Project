@@ -34,6 +34,18 @@ const render_menu = (nodes) => {
             a.setAttribute('href', "#");
             a.innerHTML = nodes.getPrice();
 
+        // create a tag for like button
+            const like = class_div.appendChild(document.createElement('a'));
+            const li1 = like.appendChild(document.createElement('li'));
+            li1.setAttribute('class', "fa-solid fa-heart");
+           
+
+        // create a tag for comment button
+            const comment = class_div.appendChild(document.createElement('a'));
+            const li2 = comment.appendChild(document.createElement('li'));
+            li2.setAttribute('class', "fa-regular fa-comments");
+         
+
 };
 
 
