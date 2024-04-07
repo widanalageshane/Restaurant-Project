@@ -66,7 +66,10 @@ const getPosts = () => {
 
 
 
+
+
 //---------------------------addPost() event listener --------------------------------------------------------------
+
 //2. This is for Post of Menu to databe--- catch the input fileds form admin post page
 const input_name = document.getElementById("id_name");
 const input_description = document.getElementById("id_description");
@@ -75,10 +78,9 @@ const input_image = document.getElementById("id_image");
 console.log(input_name);
 
 //key press function with above renderTask function.
-const button_done = document.getElementById("button_done");
+const button_done = document.getElementById("#button_done");
 
-
-function handleClick() {
+button_done.onclick = () => {
 //get all input_name, input_description, input_price, input_image values to a variable
     //alert(input_name.value + input_description.value + input_price.value + input_image.value);
     //button_done.innerHTML = "Add Menu";
@@ -105,5 +107,36 @@ function handleClick() {
     }    
         
 };
-//-----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+//---------------------------DELETE menu Part--------------------------------------------------------------
+
+
+//3. This is for delete to databe--- catch the input fileds form admin post page
+
+const button_delete = document.getElementById("#button_delete");
+
+//addeventlistener to delete from menuCard array using removeTask(id) function, once button_delete clicked, with catch error. 
+button_delete.addEventListener('click', () => {
+
+    //get the id value enterd in input field
+    const id = document.getElementById("delete_id").value;
+    if(id !== ''){
+        menuCard.removeTask(id)
+            alert('Menu deleted successfully');
+            //console.log(id);
+    } else {
+        alert('Please fill the id field');
+    }
+});
+
+
+
 getPosts();
