@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CurryBowl</title>
+    <title>Menu page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/MenuPage.css">
@@ -21,11 +21,11 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto ">
-                  <a class="nav-link" href="#">Home</a>
-                  <a class="nav-link" href="#">Menu</a>
-                  <a class="nav-link" href="#">Contact</a>
-                  <a class="nav-link" href="#">About Us</a>
-                  <a><i class="nav-link fa-solid fa-user"></i></a>
+                  <a class="nav-link" href="MainPage.html">Home</a>
+                  <a class="nav-link" href="MenuPage.html">Menu</a>
+                  <a class="nav-link" href="ContactUs.html">Contact</a>
+                  <a class="nav-link" href="AboutUs.html">About Us</a>
+                  <a href="LogIn.html"><i class="nav-link fa-solid fa-user"></i></a>
                   
                 </div>
             </div>
@@ -71,9 +71,8 @@
 
     
                    <!-- card section start -->
-<div class="container1">
-  <!--<div class="row mx-auto">
-    <div class="col-12 col-md-4 mb-4">-->
+<div id = "menu_card" class="container1">
+  
       <div class="card">
         <img src="Images/menucard1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -85,6 +84,7 @@
         </div>
       </div>
     
+      <!--
       <div class="card">
         <img src="Images/menucard4.png" class="card-img-top" alt="...">
         <div class="card-body">
@@ -160,19 +160,17 @@
           <a><i class="fa-solid fa-heart" style="color: #FFD43B;"></i></a>
           <a><i class="fa-regular fa-comments"></i></i></a>
         </div>
-      </div>
-   <!-- </div>
-  </div>  -->
+      </div>  -->
 </div>    
     
                   <!-- footer section start -->
 <div class="container-fluid text-center" style="background-color:rgb(27, 25, 25); ">
           <nav class="navbar navbar-expand-lg ">
               <div class="col-4">
-                <a class="details" href="#">Menu</a><br>
-                <a class="details" href="#">Reviews</a><br>
-                <a class="details" href="#">About Us</a><br>
-                <a class="details" href="#">Contact Us</a>
+                <a class="nav-link" href="MenuPage.html">Menu</a>
+                <a class="nav-link" href="FeedBack.html">Reviews</a>
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+                <a class="nav-link" href="ContactUs.html">Contact Us</a>
     
               </div>
               <div class="col-4 ">      
@@ -190,5 +188,7 @@
                     <!-- footer section end -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src = "./JS/indexMenu.js" type="module"></script>
+
 </body>
 </html>

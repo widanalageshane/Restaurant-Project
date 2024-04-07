@@ -16,7 +16,8 @@ body{
 
 /* navabar css */
 .nav-link{
-    color:#c49b63;
+    color: #BFA437;
+   
 }
 
 
@@ -24,6 +25,10 @@ body{
     position: sticky;
     top: 0; 
     z-index: 1000; 
+}
+
+.nav-link:hover{
+    color: #c97b50;
 }
 
 /* carousel css */
@@ -74,6 +79,11 @@ body{
    padding-top: 50%;
 }
 
+.p-3  ::after{
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+
 
 h2{
     padding-top: 100%;
@@ -95,9 +105,9 @@ h2{
 }
 
 .btn.btn-primary.btn-outline-primary {
-    border: 1px solid #c49b63;
+    border: 1px solid #BFA437;
     background: transparent;
-    color: #c49b63;
+    color: #BFA437;
 }
 
 .menuphoto{
@@ -119,11 +129,11 @@ h2{
 
 /* footer css */
 .footer-nav{
-    color: #c49b63;
+    color: #BFA437;
 }
 
 .footer-nav .nav-link{
-    color: #c49b63;
+    color: #BFA437;
     line-height: 200%;
 }
 
