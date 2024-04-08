@@ -24,7 +24,7 @@
         <div class="row">
           <div class="col">
                 <div class="form-floating my-2 ">
-                  <input class="form-control" id="floatingInputGrid" placeholder="menuName" value="chicken Pizza...">
+                  <input id="id_name" class="form-control" placeholder="menuName" value="chicken Pizza...">
                   <label for="floatingInputGrid">Menu Name</label>
                 </div>   
           </div> 
@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col">
                 <div class="form-floating my-2 ">
-                  <input  class="form-control" id="floatingInputGrid" placeholder="desciption" value="A Pizza made with.....">
+                  <input id="id_description" class="form-control desciption_class" placeholder="desciption-" value= "A Pizza made with.....">
                   <label for="floatingInputGrid">Desciption</label>
                 </div>   
           </div> 
@@ -42,7 +42,7 @@
         <div class="row">
           <div class="col">
                 <div class="form-floating my-2 ">
-                  <input  class="form-control" id="floatingInputGrid" placeholder="price" value="Price 20 €">
+                  <input  id="id_price" class="form-control price_class" placeholder="price -" value= "Price 10 €">
                   <label for="floatingInputGrid">Price</label>
                 </div>   
           </div> 
@@ -51,7 +51,7 @@
         <div class="row">
           <div class="col">
                 <div class="form-floating my-2 ">
-                  <input  class="form-control" id="floatingInputGrid" placeholder="imagePath" value="image/...">
+                  <input id="id_image" class="form-control image_class" placeholder="Image Path" value= "/menucard1.jpg">
                   <label for="floatingInputGrid">Image Path</label>
                 </div>   
           </div>
@@ -59,7 +59,7 @@
         
         <div class="row justify-content-end">
           <div class="col-auto">
-              <button type="button" class="btn btn-success">Done</button>
+              <button onclick="handleClick()" type="button" id="button_done" class="btn btn-success">Done</button>
           </div>
       </div>
 
@@ -68,15 +68,15 @@
       <div class="row">
         <div class="col">
               <div class="form-floating my-2 ">
-                <input  class="form-control" id="floatingInputGrid" placeholder="deletepost" value="chicken Pizza">
-                <label for="floatingInputGrid">Required Post Name</label>
+                <input class="form-control" id="delete_id" placeholder="id of deletepost">
+                <label for="floatingInputGrid">Required Post Id for Delete</label>
               </div>   
         </div>
       </div> 
 
       <div class="row justify-content-end">
         <div class="col-auto">
-            <button type="button" class="btn btn-danger">Delete</button>
+            <button onclick="deleteMenu()" id="button_delete" type="button" class="btn btn-danger">Delete</button>
         </div>
     </div>
 
