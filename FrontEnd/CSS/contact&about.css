@@ -62,29 +62,64 @@ body{
     background-color: black;
     height: 680px;
     width: 100%;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 00px;
+    margin-bottom: 00px;
     padding-top: 0px;
     padding-bottom: 0px;
 }
 
+.right-middle-image-AboutUS {
+    position: absolute; /* Position the image absolutely within the container */
+    margin-top: 25%; /* Align the top of the image to the middle of the container */
+
+    /*top: 60%; /* Align the top of the image to the middle of the container */
+    right: 0; /* Align the right side of the image to the right side of the container */
+    transform: translateY(-70%); /* Adjust the image position to center it vertically */
+    max-width: 55%; /* Limit maximum width of the image */
+    
+}
+
+.left-text-AboutUs {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9) ;
+    text-align: center;
+    font-size: 20px ;
+    white-space: nowrap;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:bold;
+    
+    
+}
 
 
+.right-middle-image-ContactUS {
+    position: absolute; /* Position the image absolutely within the container */
+    margin-top: 25%; /* Align the top of the image to the middle of the container */
 
+    /*top: 60%; /* Align the top of the image to the middle of the container */
+    right: 0; /* Align the right side of the image to the right side of the container */
+    transform: translateY(-70%); /* Adjust the image position to center it vertically */
+    max-width: 55%; /* Limit maximum width of the image */
+    
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.left-text-ContactUs {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9) ;
+    text-align: center;
+    font-size: 20px ;
+    white-space: nowrap;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:bold;
+    
+    
+}
 
 
 
