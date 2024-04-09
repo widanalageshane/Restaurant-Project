@@ -35,10 +35,58 @@ const render_menu = (nodes) => {
             a.setAttribute('href', "#");
             a.innerHTML = nodes.getPrice();
 
-        // create a tag for like button
-            const like = class_div.appendChild(document.createElement('a'));
-            const li1 = like.appendChild(document.createElement('li'));
-            li1.setAttribute('class', "fa-solid fa-heart");
+
+        // ceate like button
+            const likeButton = class_div.appendChild(document.createElement('button'));
+            likeButton.setAttribute('class', 'btn-like');
+            likeButton.innerHTML = '<i class="fa-solid fa-heart"></i> <span class="like-count">0</span>';
+    
+        // create comment button
+            const comment = class_div.appendChild(document.createElement('a'));
+            const li2 = comment.appendChild(document.createElement('li'));
+            li2.setAttribute('class', "fa-regular fa-comments");
+            };
+
+
+        const getPosts = () => {
+            menuCard.getPosts().then(message =>  {
+            console.log(message);
+            message.forEach(menus => {
+            render_menu(menus);
+                     
+            }).catch(error => {
+            alert(error);
+                });
+                });
+            } 
+            
+
+        // Add event listener after DOM content is loaded
+            document.addEventListener("DOMContentLoaded", function() {
+            // Delegate the event listener to a static parent element (menu_div)
+            menu_div.addEventListener('click', function(event) {
+            // Check if the clicked element is a like button
+            if (event.target && event.target.classList.contains('btn-like')) {
+            // Get the like count element for the clicked menu card
+            const likeCount = event.target.querySelector('.like-count');
+            
+            // Get the current like count value
+            let currentCount = parseInt(likeCount.textContent);
+            
+            // Increment the like count
+            currentCount++;
+            
+            // Update the like count display
+            likeCount.textContent = currentCount;
+                    }
+                });
+            });
+        
+        
+
+
+
+
            
 
         // create a tag for comment button
@@ -46,20 +94,9 @@ const render_menu = (nodes) => {
             const li2 = comment.appendChild(document.createElement('li'));
             li2.setAttribute('class', "fa-regular fa-comments");
 
-};
 
 
-const getPosts = () => {
-    menuCard.getPosts().then(message =>  {
-        console.log(message);
-        message.forEach(menus => {
-            render_menu(menus);
-         
-        }).catch(error => {
-            alert(error);
-        });
-    });
-} 
+
 
 //---------------------------getPost() end here- Totally works------------------------------------------
 
