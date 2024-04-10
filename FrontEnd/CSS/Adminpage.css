@@ -4,23 +4,43 @@ body{
 }
 
 .navbar {
-  background-color: rgb(107, 107, 104);
+  background-color: #313132;
+  padding: 20px;
    }
 
 .navbar h2{
- color: white;
+ color: #BFA437;
  padding: 5px;
   ;
 }
 
-.col{
-
-}
 
 .btn.btn-primary.btn-outline-primary {
     border: 1px solid black;
-    background: #3340FF;
-    color: black;
+    background: #313132;
+    color: #BFA437;
     font-weight: bold;
+    margin-bottom: 20px;
     
 }  
+.btn btn-danger {
+  align-items: right;
+    
+}
+.list-group-item {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  width: 60%;
+}
+
+#delete_icon {
+  color: black; 
+  font-size: 1rem;
+  transition: color 0.3s, font-size 0.3s; 
+}
+
+#delete_icon:hover {
+  color: red; /* Color of the icon on hover */
+  font-size: 1.2rem; /* Increased size of the icon on hover */
+}

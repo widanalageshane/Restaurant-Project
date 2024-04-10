@@ -51,30 +51,3 @@ button_done.onclick = () => {
 
 
 
-
-
-
-
-
-
-//---------------------------DELETE menu Part--------------------------------------------------------------
-
-
-//3. This is for delete to databe--- catch the input fileds form admin post page
-
-const button_delete = document.getElementById("button_delete");
-
-//addeventlistener to delete from menuCard array using removeTask(id) function, once button_delete clicked, with catch error. 
-button_delete.addEventListener('click', () => {
-
-    //get the id value enterd in input field
-    const id = document.getElementById("delete_id").value;
-    if(id !== ''){
-        menuCardAdd.removeTask(id)
-            alert('Menu deleted successfully');
-            //console.log(id);
-    } else {
-        alert('Please fill the id field');
-    }
-});
-
