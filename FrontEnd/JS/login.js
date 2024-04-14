@@ -1,21 +1,19 @@
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.btnLogin-popup');
-const iconClose = document.querySelector('.icon-close');
+import { User } from "./CLASS/User.js";
 
-registerLink.addEventListener('click', () => {
-  wrapper.classList.add('active');
-});
 
-loginLink.addEventListener('click', () => {
-  wrapper.classList.remove('active');
-});
+const user = new User();
+const email_input = document.querySelector('#user-email');
+const password_input = document.querySelector('#password');
 
-btnPopup.addEventListener('click', () => {
-    wrapper.classList.add('active-popup');
+document.querySelector('#login-button').addEventListener('click', (event) => {
+  event.preventDefault();
+  const email = email_input.value;
+  const password = password_input.value;
+
+  user.login(email, password).then(user => {
+    window.location.href = "MainPage.html";
+    alert("Login successful!");
+  }).catch(error => {
+    alert(error);
   });
-
-iconClose.addEventListener('click', () => {
-    wrapper.classList.remove('active-popup');
-  });
+});

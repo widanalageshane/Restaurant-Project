@@ -17,3 +17,29 @@ Content-Type: application/json
 ### Delete post
 
 DELETE http://localhost:3001/delete/73
+
+
+
+### login with valid creditials
+POST http://localhost:3001/user/login
+Content-Type: application/json
+
+{
+    "username":"userthree",
+    "email":"user3@gmail.com",
+    "password": "user3"
+}
+
+
+
+### login with wrong creditials
+
+
+POST http://localhost:3001/user/register
+Content-Type: application/json
+
+{
+    "username":"userfour",
+    "email":"user4@gmail.com",
+    "password": "user4"
+}

@@ -17,7 +17,22 @@ select * from menu;
 
 
 /////// please add your other databses below this line.
-database name is Restaurant
+
 -  user table
+
+create table account (
+	id serial primary key,
+	username varchar(100) unique not null,
+	email varchar(100) unique not null,
+	password varchar(255) not null
+);
+
+insert into account(username,email,password) values ('userone','user1@gmail.com' , 'user1');
+insert into account(username,email,password) values ('usertwo','user2@gmail.com','user2');
+insert into account(username,email,password) values ('userthree','user3@gmail.com','user3');
+
+
+
+
 -  comment table
 -  like table    /////////
