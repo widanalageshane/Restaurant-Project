@@ -34,15 +34,15 @@ const renderLink = (li, id) => {
     a.addEventListener('click', (event) => {
         menuCard.removeTask(id)
         alert("deleted")
-        .then((id) => {
-            const li_to_remove = document.querySelector(`[data-key='${id}']`);
-                if (li_to_remove) {
-                    menu_list.removeChild(li_to_remove);
-                };
-        }).catch((error) => {
-            alert(error);
-        });
+        // .then((id) => {
+        //     const li_to_remove = document.querySelector(`[data-key='${id}']`);
+        //         if (li_to_remove) {
+        //             menu_list.removeChild(li_to_remove);
+        //         };
+       // }).catch((error) => {
+         //   alert(error);
     });
+   // });
             
 }
 
@@ -50,7 +50,7 @@ const renderLink = (li, id) => {
 //....................get menu names for admin page............................
 const getPosts = () => {
         menuCard.getPosts().then(message =>  {
-        console.log(message);
+        //console.log(message);
         message.forEach(menus => {
         render_menu_Dname(menus);
                      

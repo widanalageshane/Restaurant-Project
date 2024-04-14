@@ -3,14 +3,14 @@ class Menu {
     #menu_name 
     #menu_description 
     #price 
-    #image_path
+    #image_name
 
-    constructor(menu_id, menu_name, menu_description, price, image_path) {
+    constructor(menu_id, menu_name, menu_description, price, image_name) {
         this.#menu_id = menu_id;
         this.#menu_name = menu_name;
         this.#menu_description = menu_description;
         this.#price = price;
-        this.#image_path = image_path;
+        this.#image_name = image_name;
     }
 
     getId() {
@@ -30,7 +30,7 @@ class Menu {
     }
 
     getImage() {
-        return this.#image_path;
+        return this.#image_name;
     }   
 }
 

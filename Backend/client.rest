@@ -10,10 +10,10 @@ Content-Type: application/json
     "menu_name": "Menu1_by Post method", 
     "menu_description": "Some quick example text to  and make up the bulk of the card content.",
     "price": "Price 10 € ",
-    "image_path": "Images/menucard1.jpg"
+    "image_name": "menucard6.png"
 }
 
 
 ### Delete post
 
-DELETE http://localhost:3001/delete/51
+DELETE http://localhost:3001/delete/73

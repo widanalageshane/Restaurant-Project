@@ -19,11 +19,28 @@ menuRouter.get("/", async (req, res) => {
 });
 
 menuRouter.post("/new", async (req, res) => {
+    //console.log(req.body);
+    console.log(req.files);
+    //let image_name = '';
+    
     try {
-        const { menu_name, menu_description, price, image_path } = req.body;
+        // upload the image to the server................
+        // if req. have a image file, want to upload a image file to the server "`./public/images/${image_name}` location"
+        if (req.files) {
+            const file = req.files.image_name;
+           // image_name = file.name;
+            const uploadPath = `./public/images/${file.name}`;
+            file.mv(uploadPath,(err) => {
+                if (err) {
+                    throw new Error(err);
+                }
+            });
+        }
+//....................
+        const {menu_name, menu_description, price, image_name} = req.body;
         //const sql= 'INSERT INTO menu(menu_name, menu_description, price, image_path) VALUES ($1, $2, $3, $4) RETURNING *';
-        const result = await query('INSERT INTO menu(menu_name, menu_description, price, image_path) VALUES ($1, $2, $3, $4) RETURNING *', 
-        [menu_name, menu_description, price, image_path]);
+        const result = await query('INSERT INTO menu(menu_name, menu_description, price, image_name) VALUES ($1, $2, $3, $4 ) RETURNING *', 
+        [menu_name, menu_description, price, image_name]);
 
          res.status(200).json({id: result.rows[0].menu_id});
 
@@ -32,7 +49,7 @@ menuRouter.post("/new", async (req, res) => {
         res.statusMessage = error;
         res.status(500).json({ error: error });
     }
-});
+ });
 
 menuRouter.delete("/delete/:id", async (req, res) => {
     const id = Number(req.params.id);    
