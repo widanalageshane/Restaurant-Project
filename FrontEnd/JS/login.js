@@ -10,9 +10,15 @@ document.querySelector('#login-button').addEventListener('click', (event) => {
   const email = email_input.value;
   const password = password_input.value;
 
-  user.login(email, password).then(user => {
+  user.login(email, password)
+  .then(user => {
+    if (user.email === 'admin@gmail.com') {
+      window.location.href = "MainPageAdmin.html";
+      alert("Login successful!");
+    } else {
     window.location.href = "MainPage.html";
     alert("Login successful!");
+    }
   }).catch(error => {
     alert(error);
   });

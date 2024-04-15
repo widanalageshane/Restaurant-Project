@@ -18,73 +18,84 @@ body {
 }
 
 /* background image CSS */
-.background-img{
-  padding: 0;
-  background-image: url("../Images/FEEDBACK.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  /* Adjusted to fill the 75% viewport height */
-  width: 100%;
-  height: 25%;
+.background-img {
   position: relative;
-  z-index: 1;
-}
-
-
-
-/* Feedback headding*/
-.background-img .content {
-  position: absolute; /* Position the content absolutely within the container */
-  top: 20%; /* Position the content vertically centered */
-  left: 50%; /* Position the content horizontally centered */
-  transform: translate(-50%, -50%); /* Adjust the position to center */
-  color: white; /* Set the color of the text */
-  text-align: center; /* Center-align the text */
-}
-
-.background-image .content h1 {
-  font-size: 3rem; /* Adjust the font size as needed */
-  font: inter; /* Set the font family */
-  margin: 0; /* Remove any default margin */
-}
-
-
-/* Feedback form */
-.container {
-  color: white;
-  font-family: 'Inter', sans-serif;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
 }
 
-/* Feedback text */
-.feedback-form-container {
-  width: 60%;
-  height: 65px;
-  padding: 30px;
-  margin: 40px;
-  background: rgba(9, 9, 9, 0.97);
-  border: 1px solid rgb(14, 13, 13);
-  border-radius: 30px;
-  /* Center the form */ 
-  display: flex;
-  align-items: center;
+.background-img img {
+  width: 100%;
+  height: auto;
 }
 
-#submit-button {
-  background-color:#3A2B26;
-  height: 65px;
+.content {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin: 10px;
+  text-align: center;
 }
- 
+
+.feedback-form-container {
+  position: absolute;
+  align-items: center;
+  top: 35%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Adjust width as needed */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* Optional: Add shadow for better visibility */
+}
+
+.feedback-form-container input[type="text"] {
+  width: calc(100% - 100px); /* Adjust width of input field */
+  margin-right: 10px;
+}
+
+.feedback-form-container button {
+  width: 100px; /* Adjust width of submit button */
+}
+
+.comments{
+  margin-top: 5%;
+  margin-left: 20px;
+}
+
+.darker{
+  border: 1px solid #ecb21f;
+  background-color: black;
+  float: right;
+  border-radius: 5px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+.comment{
+  border: 1px solid rgba(16, 46, 46, 1);
+  background-color: rgba(16, 46, 46, 0.973);
+  float: left;
+  border-radius: 5px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-top: 10px;
+  
+}
+.comment h4,.comment span,.darker h4,.darker span{
+  display: inline;
+}
+
+.comment p,.comment span,.darker p,.darker span{
+  color: rgb(184, 183, 183);
+}
+
+h1,h4{
+  color: white;
+  font-weight: bold;
+}
 

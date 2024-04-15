@@ -32,9 +32,7 @@ Content-Type: application/json
 
 
 
-### login with wrong creditials
-
-
+### user resistation
 POST http://localhost:3001/user/register
 Content-Type: application/json
 
@@ -42,4 +40,15 @@ Content-Type: application/json
     "username":"userfour",
     "email":"user4@gmail.com",
     "password": "user4"
+}
+
+### comment get method
+GET http://localhost:3001/comment
+
+### comment post method
+POST http://localhost:3001/comment/new HTTP/1.1
+Content-Type: application/json
+
+{
+    "comment_text": "This is a comment2, for Nice product "
 }

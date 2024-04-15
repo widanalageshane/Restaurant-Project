@@ -27,9 +27,10 @@ create table account (
 	password varchar(255) not null
 );
 
+insert into account(username,email,password) values ('Admin','admin@gmail.com','admin123');
 insert into account(username,email,password) values ('userone','user1@gmail.com' , 'user1');
 insert into account(username,email,password) values ('usertwo','user2@gmail.com','user2');
-insert into account(username,email,password) values ('userthree','user3@gmail.com','user3');
+
 
 
 

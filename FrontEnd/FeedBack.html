@@ -48,11 +48,26 @@
     <div class="feedback-form-container">
         <!-- Feedback text -->
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Enter your Feedback" aria-label="Enter your Feedback" aria-describedby="submit-button">
+            <input type="text" id="comment_add" class="form-control" placeholder="Enter your Feedback" aria-label="Enter your Feedback" aria-describedby="submit-button">
             <button class="btn btn-outline-secondary" type="button" id="submit-button">SUBMIT</button>
         </div>
     </div>
 
+     <!-- Comments section -->
+     <div class="container">
+        <div class="row" id="comment_id"><span><h1>Comments</h1></span>
+            <div class="comment mt-4 text-justify float-left">
+                <img src="./Images/chat.jpg" alt="" class="rounded-circle" width="30" height="30">
+                <h4>Jhon Doe</h4>
+                <span>- 20 October, 2018</span>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+            </div>
+        </div>
+    </div>
+    
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src = "./JS/Getcomment.js" type="module"></script>
 </body>
 </html> 
