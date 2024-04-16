@@ -1,4 +1,4 @@
-
+import{BACKEND_URL} from '../config.js'
 
 class User {
     #id = undefined
@@ -23,7 +23,7 @@ class User {
 
       async login(email,password) {
         const data = JSON.stringify({email: email,password: password})
-        const response = await fetch('http://localhost:3001/user/login',{
+        const response = await fetch(BACKEND_URL+'/user/login',{
           method: 'post',
           headers: {'Content-Type':'application/json'},
           body: data
@@ -41,7 +41,7 @@ class User {
 
       async register(username,email,password) {
         const data = JSON.stringify({username:username,email: email,password: password})
-        const response = await fetch('http://localhost:3001/user/register',{
+        const response = await fetch(BACKEND_URL+'/user/register',{
           method: 'post',
           headers: {'Content-Type':'application/json'},
           body: data
