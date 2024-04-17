@@ -13,11 +13,11 @@ class User {
       }
     }
 
-    get id() {
+    getid() {
         return this.#id
       }
     
-      get email() {
+      getemail() {
         return this.#email
       }
 

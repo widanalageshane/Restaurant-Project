@@ -1,8 +1,4 @@
-//import { url } from '../config.js';
-
 import { Comment } from './comment.js';
-//import { BACKEND_URL } from '../config.js';
-//const BACKEND_URL = 'http://localhost:3001'
 
 
 class CommentCard {
@@ -14,40 +10,16 @@ class CommentCard {
     }
 
 //--------------------Getpost from database totally works-----------------------------------------------------------    
-    addPost(text) {
-
-        return new Promise( async(resolve, reject) => {
-            const json = JSON.stringify({description: text});
-            fetch(this.#backend_url + '/comment/new', {
-                method: 'post',
-                headers: {'Content-Type': 'application/json'},
-                body: json
-             })
-            .then((response) => response.json())
-            .then((json) => {
-                resolve(this.#addToArray(json.comment_id, json.comment_text));
-            },(error) => {
-                reject(error);
-            });
-        });
-    }
-
-    // add new task to the array  
-    #addToArray = (comment_id, comment_text) => {
-    const comment = new Comment(comment_id, comment_text);
-    this.#commentCard.push(comment);
-    return comment;
-    }
-
-
 // show all menus in the web page from database
-    getPosts = () => {
-        
+    getComment = () => {
+            
         return new Promise(async(resolve, reject) => {
-            fetch(this.#backend_url+ '/comment')
+            fetch(this.#backend_url)
             .then(response => response.json())
             .then(json => {
-                this.#readJson(json);  
+                //console.log(json);
+                this.#readJson(json);
+                //console.log(this.#commentCard);  
                 resolve(this.#commentCard);
 
             }),(error) => {
@@ -55,14 +27,41 @@ class CommentCard {
             };
         });
     }
-// go through json resopnd from backend and push each item to a class of Menu (into menuCard array)
+    // go through json resopnd from backend and push each item to a class of Menu (into menuCard array)
     #readJson = (json) =>{
         json.forEach(node => {
-            const comment = new Comment(node.comment_id, node.comment_text);
+            const comment = new Comment(node.comment_id, node.comment_text, node.saved, node.menu_id, node.account_id);
             this.#commentCard.push(comment);
         });
-    
     }
-}
+  
+//.....................add comment to database from user page start here...............................................
+    addComment(text) {
+
+        return new Promise( async(resolve, reject) => {
+            const json = JSON.stringify({comment_text: text, menu_id: "74" , account_id: "1" });
+            fetch(this.#backend_url + '/new', {
+                method: 'post',
+                headers: {'Content-Type': 'application/json'},
+                body: json
+             })
+            .then((response) => response.json())
+            .then((json) => {
+                resolve(this.#addToArray(json.comment_id, json.comment_text, json.saved, json.menu_id, json.account_id));
+            },(error) => {
+                reject(error);
+            });
+        });
+    }
+
+    // add new task to the array  
+    #addToArray = (comment_id, comment_text, saved, menu_id, account_id) => {
+    const comment = new Comment(comment_id, comment_text, saved, menu_id, account_id);
+    this.#commentCard.push(comment);
+    return comment;
+    }
+
+
+}  
 
 export { CommentCard };

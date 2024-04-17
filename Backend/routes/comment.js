@@ -22,11 +22,10 @@ commentRouter.get("/", async (req, res) => {
 
 commentRouter.post("/new", async (req, res) => {
     try {
-        const sql = 'insert into comment(comment_text) values ($1) returning *'
-        const result = await query(sql, [req.body.comment_text]);
-        res.status(200).json({id: result.rows[0].comment_id});
+        const sql = 'insert into comment(comment_text,menu_id,account_id) values ($1,$2,$3) returning *'
+        const result = await query(sql, [req.body.comment_text, req.body.menu_id, req.body.account_id]);
+        res.status(200).json(result.rows[0]);
 
-         // Fixed: Added a comma between "id" and its value
     } catch (error) {
         res.statusMessage = error;
         res.status(500).json({ error: error });

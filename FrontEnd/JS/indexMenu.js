@@ -55,7 +55,15 @@ const render_menu = (nodes) => {
             const comment = class_div.appendChild(document.createElement('a'));
             const li2 = comment.appendChild(document.createElement('li'));
             li2.setAttribute('class', "fa-regular fa-comments");
-            li2.innerHTML = ('href' = "feedback.html");
+            li2.addEventListener('click', () => {
+                window.location.href = 'FeedBack.html';
+            });
+            //li2 'class' set to "fa-regular fa-comments"and 'click links"FeedBack.html");
+
+            //li2.addEventListener('click', => {window.location.href = 'FeedBack.html';
+            //});
+
+            
 };
 
 

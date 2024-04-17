@@ -168,6 +168,16 @@ body{
 .btn-like.liked {
     color: red;
 }
+.like-count {
+    font-size: 1.5rem;
+    color: black;
+
+}
+
+.fa-regular:hover {
+    color: #BFA437;
+    cursor: pointer;
+}
 
 .fa-comments {
     font-size: 2.5rem;
@@ -175,9 +185,6 @@ body{
     margin-right: 10px;
 }
 
-.fa-comment:hover {
-    font-size: 2.2rem;
-}
 
 
 

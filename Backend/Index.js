@@ -4,7 +4,7 @@ const fileUpload = require('express-fileupload');
 
 const { menuRouter } = require('./routes/indexMenu.js');
 const { userRouter } = require('./routes/user');
-const { commentRouter } = require('./routes/comment.js');
+
 
 const port = 3001;
 
@@ -19,7 +19,7 @@ app.use(express.static('public'));
 
 app.use('/', menuRouter);
 app.use('/user',userRouter)
-app.use('/comment', commentRouter); 
+
 
 
 

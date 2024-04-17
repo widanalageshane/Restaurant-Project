@@ -21,7 +21,7 @@ select * from menu;
 -  user table
 
 create table account (
-	id serial primary key,
+	account_id serial primary key,
 	username varchar(100) unique not null,
 	email varchar(100) unique not null,
 	password varchar(255) not null
@@ -36,4 +36,22 @@ insert into account(username,email,password) values ('usertwo','user2@gmail.com'
 
 
 -  comment table
+
+create table comment (
+  comment_id serial primary key,
+  comment_text text not null,
+  saved timestamp default current_timestamp,
+  menu_id int not null,
+    constraint fk_menu
+      foreign key (menu_id)
+        references menu(menu_id),
+  account_id int not null,
+    constraint fk_account
+      foreign key (account_id)
+        references account(account_id)
+)
+
+insert into comment(comment_text,menu_id,account_idid) values ('admin@gmail.com',1,1);
+
+
 -  like table    /////////
