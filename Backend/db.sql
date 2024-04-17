@@ -51,7 +51,7 @@ create table comment (
         references account(account_id)
 )
 
-insert into comment(comment_text,menu_id,account_idid) values ('admin@gmail.com',1,1);
+insert into comment(comment_text,menu_id,account_id) values ('admin@gmail.com',1,1);
 
 
 -  like table    /////////
