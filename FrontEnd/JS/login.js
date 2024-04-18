@@ -1,5 +1,8 @@
 import { User } from "./CLASS/User.js";
 
+//const params = new URLSearchParams(window.location.search);
+//const account_id = params.get('account_id');
+
 
 const user = new User();
 const email_input = document.querySelector('#user-email');
@@ -10,9 +13,10 @@ document.querySelector('#login-button').addEventListener('click', (event) => {
   const email = email_input.value;
   const password = password_input.value;
 
+
   user.login(email, password)
   .then(user => {
-    if (user.email === 'admin@gmail.com') {
+    if (email === "admin@gmail.com") {
       window.location.href = "MainPageAdmin.html";
       alert("Login successful!");
     } else {

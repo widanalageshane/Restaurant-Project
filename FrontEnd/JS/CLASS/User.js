@@ -2,6 +2,7 @@ import{BACKEND_URL} from '../config.js'
 
 class User {
     #id = undefined
+    #username = undefined
     #email = undefined
   
     constructor() {
@@ -9,12 +10,17 @@ class User {
       if (userFromStorage) {
         const userObject = JSON.parse(userFromStorage)
         this.#id = userObject.id
+        this.#username = userObject.username
         this.#email = userObject.email
       }
     }
 
-    getid() {
+      getid() {
         return this.#id
+      }
+
+      getusername() {
+        return this.#username
       }
     
       getemail() {
@@ -33,6 +39,7 @@ class User {
           this.#id = json.id
           this.#email = json.email
           sessionStorage.setItem('user',JSON.stringify(json))
+          //account_id =json.account_id;
           return this
         } else {
           throw response.statusText

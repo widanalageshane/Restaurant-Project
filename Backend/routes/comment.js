@@ -9,7 +9,8 @@ const commentRouter = express.Router();
 
 commentRouter.get("/", async (req, res) => {
     try {
-        const result = await query ('SELECT * FROM comment');
+        // need to get comment releted to a selected menu_id
+        const result = await query ('SELECT * FROM comment WHERE menu_id = $1', [req.query.menu_id]);
         const raws = result.rows ? result.rows : [];
         res.status(200).json(raws);
 

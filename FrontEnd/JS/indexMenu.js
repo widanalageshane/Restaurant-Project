@@ -21,7 +21,7 @@ const render_menu = (nodes) => {
             img_menu.setAttribute('alt', "menu image");
         //    //http://localhost:3001/images/placeholder.png
             //console.log(nodes.image_name.name);
-            img_menu.src = BACKEND_URL + '/images/' + "menucard4.png";
+            img_menu.src = BACKEND_URL + '/images/' + nodes.getImage();
             //Console.log(nodes);
            //img_menu.setAttribute('src', nodes.getImage());
 
@@ -56,7 +56,7 @@ const render_menu = (nodes) => {
             const li2 = comment.appendChild(document.createElement('li'));
             li2.setAttribute('class', "fa-regular fa-comments");
             li2.addEventListener('click', () => {
-                window.location.href = 'FeedBack.html';
+                window.location.href = 'FeedBack.html?menu_id=' + nodes.getId();
             });
             //li2 'class' set to "fa-regular fa-comments"and 'click links"FeedBack.html");
 

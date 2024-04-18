@@ -1,6 +1,35 @@
 import { CommentCard } from './CLASS/commentGet.js';
 
-const commentCard = new CommentCard('http://localhost:3001/comment');
+
+//obtaining the menu_id from the url
+const params = new URLSearchParams(window.location.search);
+const menu_id =params.get('menu_id')
+const menu_name =params.get('menu_name')
+
+
+
+//obtaining the account_id from the session storage
+const userDataString = sessionStorage.getItem('user');
+const userDataObject = JSON.parse(userDataString);
+//console.log(userDataObject);
+const account_id = userDataObject.account_id;
+
+
+// get username for comment post
+async function getUsername(id) {
+    const response = await fetch('http://localhost:3001'+ '/user/username/' + id);
+    const json = await response.json();
+    //console.log(json.username);
+    return json.username;
+}
+
+//...........................................................................................................................
+
+const commentCard = new CommentCard('http://localhost:3001/comment '+ '/'+ menu_id);
+
+
+
+
 
 //1.This is for getPost---- catch the card section div in which we want to add the card divs
 const comment_div = document.getElementById("comment_id");
@@ -20,7 +49,10 @@ const rendercomment = (comment) => {
 
     // create this <h4>Jhon Doe</h4>
     const h4 = card_div.appendChild(document.createElement("h4"));
-    h4.innerHTML = "  _Raniiiiiil ";
+// how to get the output of getUsername(account_id) function to a variable called user_name
+    const user_name = getUsername(account_id);    
+    h4.innerHTML = user_name;
+    
 
     // create this <span>- 20 October, 2018</span>
     const span = card_div.appendChild(document.createElement("span"));
@@ -31,6 +63,9 @@ const rendercomment = (comment) => {
     // create this "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
     const p = card_div.appendChild(document.createElement('p'));
     p.innerHTML = comment.gettext();
+
+    // const commentMenuName = card_div.appendChild(document.getElementById("p"));
+    // commentMenuName.innerHTML = menu_name;
 
 }
         
@@ -50,9 +85,7 @@ submit_buttn.addEventListener('click', (event) => {
             event.preventDefault()
             const comment_add =input.value.trim();
             if (comment_add !== '') {
-                //add "comment_add,saved,menu_id, account_id" to the commentCard array database
-                //const comment_save = JSON.stringify({comment_text: comment_add, menu_id:"74" , account_id: "1" });
-                commentCard.addComment(comment_add)
+                commentCard.addComment(comment_add, menu_id, account_id)
                 //render the comment to the web page
                 .then((comment) => {
                     input.value = '';
@@ -80,3 +113,4 @@ const getComment = () => {
 
 
 getComment();
+

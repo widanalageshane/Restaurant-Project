@@ -36,18 +36,19 @@ class CommentCard {
     }
   
 //.....................add comment to database from user page start here...............................................
-    addComment(text) {
+    addComment(text, menu_id, account_id) {
+
 
         return new Promise( async(resolve, reject) => {
-            const json = JSON.stringify({comment_text: text, menu_id: "74" , account_id: "1" });
-            fetch(this.#backend_url + '/new', {
+            const json = JSON.stringify({comment_text: text, menu_id: menu_id, account_id: account_id });
+            fetch(this.#backend_url+ '/new',{
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: json
              })
             .then((response) => response.json())
             .then((json) => {
-                resolve(this.#addToArray(json.comment_id, json.comment_text, json.saved, json.menu_id, json.account_id));
+                resolve(this.#addToArray(json.comment_id, text, json.saved, menu_id, account_id));
             },(error) => {
                 reject(error);
             });
@@ -60,6 +61,7 @@ class CommentCard {
     this.#commentCard.push(comment);
     return comment;
     }
+
 
 
 }  

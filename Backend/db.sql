@@ -10,8 +10,14 @@ create table menu(
     image_name varchar(100)
 );
 
-insert into menu(menu_name, menu_description, price, image_name) values('Menu Name From DB 1', 'Some quick example text to build on the 
+insert into menu(menu_name, menu_description, price, image_name) values('Menu Name One ', 'Some quick example text to build on the 
 																		card title and make up the bulk of the card content.', 'Price 10 € ', 'menucard1');
+insert into menu(menu_name, menu_description, price, image_name) values('Menu Name Two', 'Some quick example text to build on the 
+																		card title and make up the bulk of the card content.', 'Price 15 € ', 'menucard2');
+insert into menu(menu_name, menu_description, price, image_name) values('Menu Name Three', 'Some quick example text to build on the
+                                    card title and make up the bulk of the card content.', 'Price 20 € ', 'menucard3');
+insert into menu(menu_name, menu_description, price, image_name) values('Menu Name Four', 'Some quick example text to build on the
+                                    card title and make up the bulk of the card content.', 'Price 30 € ', 'menucard4');                                  
 		
 select * from menu;
 
@@ -51,7 +57,21 @@ create table comment (
         references account(account_id)
 )
 
-insert into comment(comment_text,menu_id,account_id) values ('admin@gmail.com',1,1);
+insert into comment(comment_text,menu_id,account_id) values ('Wow Its really nice menu, I really like It. Need Much more menues from you',1,1);
+insert into comment(comment_text,menu_id,account_id) values ('Wow Its really nice menu, I really like It. Need Much more menues from you',74,1);
 
 
 -  like table    /////////
+
+create table like (
+  like_id serial primary key,
+  like_count int not null,
+  menu_id int not null,
+    constraint fk_menu
+      foreign key (menu_id)
+        references menu(menu_id),
+  account_id int not null,
+    constraint fk_account
+      foreign key (account_id)
+        references account(account_id)
+)

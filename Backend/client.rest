@@ -20,6 +20,9 @@ DELETE http://localhost:3001/delete/73
 
 
 
+
+
+//................LOG................................................................................
 ### login with valid creditials
 POST http://localhost:3001/user/login
 Content-Type: application/json
@@ -42,6 +45,14 @@ Content-Type: application/json
     "password": "user4"
 }
 
+
+###  getting username
+GET http://localhost:3001/user/username/1
+
+
+
+
+//................Commment.......................................................................
 ### comment get method
 GET http://localhost:3001/comment
 
@@ -52,6 +63,6 @@ Content-Type: application/json
 
 {
     "comment_text": "This is a comment3, for Nice product ",
-    "menu_id": "74",
+    "menu_id": "100",
     "account_id": "1"
 }

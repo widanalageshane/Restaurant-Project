@@ -21,14 +21,14 @@ menuRouter.get("/", async (req, res) => {
 menuRouter.post("/new", async (req, res) => {
     //console.log(req.body);
     console.log(req.files);
-    //let image_name = '';
+    let image_name = '';
     
     try {
         // upload the image to the server................
         // if req. have a image file, want to upload a image file to the server "`./public/images/${image_name}` location"
         if (req.files) {
             const file = req.files.image_name;
-           // image_name = file.name;
+            image_name = file.name;
             const uploadPath = `./public/images/${file.name}`;
             file.mv(uploadPath,(err) => {
                 if (err) {
@@ -37,7 +37,7 @@ menuRouter.post("/new", async (req, res) => {
             });
         }
 //....................
-        const {menu_name, menu_description, price, image_name} = req.body;
+        const {menu_name, menu_description, price} = req.body;
         //const sql= 'INSERT INTO menu(menu_name, menu_description, price, image_path) VALUES ($1, $2, $3, $4) RETURNING *';
         const result = await query('INSERT INTO menu(menu_name, menu_description, price, image_name) VALUES ($1, $2, $3, $4 ) RETURNING *', 
         [menu_name, menu_description, price, image_name]);
@@ -93,6 +93,10 @@ menuRouter.post("/comment/new", async (req, res) => {
         res.status(500).json({ error: error });
     }
 })
+
+
+
+
 
 
 module.exports = {menuRouter};
