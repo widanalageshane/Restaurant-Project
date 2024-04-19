@@ -57,21 +57,8 @@ create table comment (
         references account(account_id)
 )
 
-insert into comment(comment_text,menu_id,account_id) values ('Wow Its really nice menu, I really like It. Need Much more menues from you',1,1);
-insert into comment(comment_text,menu_id,account_id) values ('Wow Its really nice menu, I really like It. Need Much more menues from you',74,1);
+insert into comment(comment_text,menu_id,account_id) values ('Wow Its really nice menu, I really like It. Need Much more menues from you',1,2);
+insert into comment(comment_text,menu_id,account_id) values ('Wow Its really nice menu, I really like It. Need Much more menues from you',2,1);
 
 
--  like table    /////////
 
-create table like (
-  like_id serial primary key,
-  like_count int not null,
-  menu_id int not null,
-    constraint fk_menu
-      foreign key (menu_id)
-        references menu(menu_id),
-  account_id int not null,
-    constraint fk_account
-      foreign key (account_id)
-        references account(account_id)
-)

@@ -97,8 +97,22 @@ body {
   margin-left: 20px;
 }
 
+.text-menuName1 {
+  color: #BFA437;
+  font-family: Cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+
+}
+.text-commentfor{
+  color: white; 
+  font-family :georgia;
+  font-size: 2.5rem;
+  font-weight: bold;
+
+}
 .text-username {
-  color: rgba(235, 248, 122, 0.8);
+  color: #BFA437;
   font-family:Cursive;
   
 }

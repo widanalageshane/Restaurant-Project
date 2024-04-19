@@ -11,7 +11,7 @@ const menu_name =params.get('menu_name')
 //obtaining the account_id from the session storage
 const userDataString = sessionStorage.getItem('user');
 const userDataObject = JSON.parse(userDataString);
-console.log(userDataObject);
+//console.log(userDataObject);
 const account_id = userDataObject.account_id;
 
 
@@ -32,9 +32,11 @@ const commentCard = new CommentCard('http://localhost:3001/comment');
 const comment_div = document.getElementById("comment_id");
 
 const span1 = comment_div.appendChild(document.createElement("span"));
-    span1.innerHTML = `<h1>Comments for - ${menu_name}</h1>`
-
-
+span1.innerHTML = "Comments for - ";
+span1.setAttribute("class","text-commentfor");
+const span2 = span1.appendChild(document.createElement("span"));
+span2.innerHTML = menu_name;
+span2.setAttribute("class","text-menuName1");
 
 //............................................render menu name only for delete in ADMIN page
 const rendercomment = (comment) => {
@@ -119,14 +121,10 @@ submit_buttn.addEventListener('click', (event) => {
 const getComment = () => {
     commentCard.getComment()
     .then(message =>  {
-    //console.log(message);
-    //filter in message to get only the comment for the defined menu_id, then run the rendercomment function
-    const comment_menuid = message.filter(menues => menues.getId() === 100);
-    //console.log(comment_menuid);
-    message.forEach(comment => {
+        message.forEach(comment => {
         rendercomment(comment);           
-    })
-});
+        })
+    });
 } 
 
 
