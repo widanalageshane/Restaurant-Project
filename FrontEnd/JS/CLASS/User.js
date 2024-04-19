@@ -9,7 +9,7 @@ class User {
       const userFromStorage = sessionStorage.getItem('user')
       if (userFromStorage) {
         const userObject = JSON.parse(userFromStorage)
-        this.#id = userObject.id
+        this.#id = userObject.account_id
         this.#username = userObject.username
         this.#email = userObject.email
       }
@@ -27,6 +27,10 @@ class User {
         return this.#email
       }
 
+      get isLoggedIn(){
+        return this.#id !== undefined ? true : false
+      }
+
       async login(email,password) {
         const data = JSON.stringify({email: email,password: password})
         const response = await fetch(BACKEND_URL+'/user/login',{
@@ -36,7 +40,7 @@ class User {
         })
         if (response.ok === true) {
           const json = await response.json()
-          this.#id = json.id
+          this.#id = json.account_id
           this.#email = json.email
           sessionStorage.setItem('user',JSON.stringify(json))
           //account_id =json.account_id;
@@ -55,11 +59,18 @@ class User {
         })
         if (response.ok === true) {
           const json = await response.json()
-          return json.id
+          return json.account_id
         } else {
           throw response.statusText 
         }
       }
+
+      logout(){
+        this.#id = undefined
+        this.#email = undefined
+        sessionStorage.removeItem('user')
+      }
+
 
 }
 
