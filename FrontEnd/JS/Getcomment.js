@@ -25,7 +25,7 @@ async function getUsername(id) {
 
 //...........................................................................................................................
 
-const commentCard = new CommentCard('http://localhost:3001/comment');
+const commentCard = new CommentCard('http://localhost:3001/comment/'+ menu_id);
 
 
 //1.This is for getPost---- catch the card section div in which we want to add the card divs

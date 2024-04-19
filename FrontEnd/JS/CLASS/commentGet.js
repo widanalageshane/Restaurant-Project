@@ -41,7 +41,7 @@ class CommentCard {
 
         return new Promise( async(resolve, reject) => {
             const json = JSON.stringify({comment_text: text, menu_id: menu_id, account_id: account_id });
-            fetch(this.#backend_url+ '/new',{
+            fetch('http://localhost:3001/comment'+ '/new',{
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: json

@@ -54,7 +54,7 @@ GET http://localhost:3001/user/username/1
 
 //................Commment.......................................................................
 ### comment get method
-GET http://localhost:3001/comment
+GET http://localhost:3001/comment/102
 
 
 ### comment post method

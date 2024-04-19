@@ -70,9 +70,9 @@ menuRouter.delete("/delete/:id", async (req, res) => {
 //...............comment post code...................
 
 
-menuRouter.get("/comment", async (req, res) => {
+menuRouter.get("/comment/:id", async (req, res) => {
     try {
-        const result = await query ('SELECT * FROM comment');
+        const result = await query ('SELECT * FROM comment WHERE menu_id = $1', [req.params.id]);
         const raws = result.rows ? result.rows : [];
         res.status(200).json(raws);
 
