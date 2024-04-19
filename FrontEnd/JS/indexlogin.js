@@ -1,21 +1,24 @@
-// const wrapper = document.querySelector('.wrapper');
-// const loginLink = document.querySelector('.login-link');
-// const registerLink = document.querySelector('.register-link');
-// const btnPopup = document.querySelector('.btnLogin-popup');
-// const iconClose = document.querySelector('.icon-close');
 
-// registerLink.addEventListener('click', () => {
-//   wrapper.classList.add('active');
-// });
+// //get comment count for menu_id
+// async function getCommentCount(id) {
+//     const response = await fetch('http://localhost:3001/comment/count/' + id);
+//     const json = await response.json();
+//     //console.log(json);
+//     return json;
+//   }
 
-// loginLink.addEventListener('click', () => {
-//   wrapper.classList.remove('active');
-// });
+// //get like count for menu_id
+// async function getLikeCount(id) {
+//     const response = await fetch('http://localhost:3001/like/' + id);
+//     const json = await response.json();
+//     //console.log(json);
+//     return json;
+//   }
 
-// btnPopup.addEventListener('click', () => {
-//     wrapper.classList.add('active-popup');
-//   });
 
-// iconClose.addEventListener('click', () => {
-//     wrapper.classList.remove('active-popup');
-//   });
+//   // fucntion to get username from account_id by fetching from backend as BACKEND_URL+'/user/username/' + id
+// async function getUsername(id) {
+//     const response = await fetch('http://localhost:3001/user/username/' + id);
+//     const json = await response.json();
+//     return json.username;
+//   }

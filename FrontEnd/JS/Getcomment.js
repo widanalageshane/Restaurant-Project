@@ -17,7 +17,7 @@ const account_id = userDataObject.account_id;
 
 // fucntion to get username from account_id by fetching from backend as BACKEND_URL+'/user/username/' + id
 async function getUsername(id) {
-    const response = await fetch('http://localhost:3001'+'/user/username/' + id);
+    const response = await fetch('http://localhost:3001/user/username/' + id);
     const json = await response.json();
     return json.username;
   }

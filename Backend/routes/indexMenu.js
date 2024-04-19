@@ -95,6 +95,46 @@ menuRouter.post("/comment/new", async (req, res) => {
 })
 
 
+//get comment count for menu_id
+menuRouter.get("/comment/count/:id", async (req, res) => {
+    try {
+        const result = await query ('select count(comment_id) from comment inner join menu on menu.menu_id=comment.menu_id where menu.menu_id=$1;', [req.params.id]);
+        //const raws = result.rows ? result.rows : [];
+        res.status(200).json(result.rows[0]);
+
+    } catch (error) {
+        res.statusMessage = error;
+        res.status(500).json({ error: error });
+    }
+});
+
+// like routes.............................................................
+
+//get comment count for menu_id
+menuRouter.get("/like/:id", async (req, res) => {
+    try {
+        const result = await query ('select count(like_id) from like_count inner join menu on menu.menu_id=like_count.menu_id where menu.menu_id= $1;', [req.params.id]);
+        //const raws = result.rows ? result.rows : [];
+        res.status(200).json(result.rows[0]);
+
+    } catch (error) {
+        res.statusMessage = error;
+        res.status(500).json({ error: error });
+    }
+});
+
+//add like to database
+menuRouter.post("/like/new", async (req, res) => {
+    try {
+        const sql = 'insert into like_count(menu_id,account_id) values ($1,$2) returning *'
+        const result = await query(sql, [req.body.menu_id, req.body.account_id]);
+        res.status(200).json(result.rows[0]);
+
+    } catch (error) {
+        res.statusMessage = error;
+        res.status(500).json({ error: error });
+    }
+})
 
 
 

@@ -169,8 +169,18 @@ body{
     color: red;
 }
 .like-count {
-    font-size: 1.5rem;
-    color: black;
+    font-size: 1.3rem;
+    color: #144CA5;
+    padding-left: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.comment-count {
+    font-size: 1.3rem;
+    color: #144CA5;
+    padding-left: 10px;
+    font-family: 'Josefin Sans', sans-serif;
 
 }
 

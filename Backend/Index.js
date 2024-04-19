@@ -3,7 +3,8 @@ const cors = require('cors');
 const fileUpload = require('express-fileupload');
 
 const { menuRouter } = require('./routes/indexMenu.js');
-const { userRouter } = require('./routes/user');
+const { userRouter } = require('./routes/user.js');
+
 
 
 const port = 3001;
