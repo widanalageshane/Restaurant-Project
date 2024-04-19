@@ -56,7 +56,9 @@ const render_menu = (nodes) => {
             const li2 = comment.appendChild(document.createElement('li'));
             li2.setAttribute('class', "fa-regular fa-comments");
             li2.addEventListener('click', () => {
-                window.location.href = 'FeedBack.html?menu_id=' + nodes.getId();
+                //get both menu_id and mrnu_name with FeedBack.hyml
+                window.location.href = 'FeedBack.html?menu_id=' + nodes.getId() + '&menu_name=' + nodes.getName();
+
             });
             //li2 'class' set to "fa-regular fa-comments"and 'click links"FeedBack.html");
 

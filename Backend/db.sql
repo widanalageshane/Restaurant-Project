@@ -11,13 +11,13 @@ create table menu(
 );
 
 insert into menu(menu_name, menu_description, price, image_name) values('Menu Name One ', 'Some quick example text to build on the 
-																		card title and make up the bulk of the card content.', 'Price 10 € ', 'menucard1');
+																		card title and make up the bulk of the card content.', 'Price 10 € ', 'menucard1.png');
 insert into menu(menu_name, menu_description, price, image_name) values('Menu Name Two', 'Some quick example text to build on the 
-																		card title and make up the bulk of the card content.', 'Price 15 € ', 'menucard2');
+																		card title and make up the bulk of the card content.', 'Price 15 € ', 'menucard2.png');
 insert into menu(menu_name, menu_description, price, image_name) values('Menu Name Three', 'Some quick example text to build on the
-                                    card title and make up the bulk of the card content.', 'Price 20 € ', 'menucard3');
+                                    card title and make up the bulk of the card content.', 'Price 20 € ', 'menucard3.png');
 insert into menu(menu_name, menu_description, price, image_name) values('Menu Name Four', 'Some quick example text to build on the
-                                    card title and make up the bulk of the card content.', 'Price 30 € ', 'menucard4');                                  
+                                    card title and make up the bulk of the card content.', 'Price 30 € ', 'menucard4.png');                                  
 		
 select * from menu;
 

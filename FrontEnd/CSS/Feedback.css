@@ -97,6 +97,29 @@ body {
   margin-left: 20px;
 }
 
+.text-username {
+  color: rgba(235, 248, 122, 0.8);
+  font-family:Cursive;
+  
+}
+
+.text-datetTme {
+  color: #BFA437;
+  font-family:Cursive;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.text-commentArea{
+  color: white;
+  font-family: Courier New;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-top: 10px;
+
+
+}
+
 .darker{
   border: 1px solid #ecb21f;
   background-color: black;
@@ -109,7 +132,7 @@ body {
 
 .comment{
   border: 1px solid rgba(16, 46, 46, 1);
-  background-color: rgba(16, 46, 46, 0.973);
+  background-color: rgba(13, 51, 38, 0.8);
   float: left;
   border-radius: 5px;
   padding-left: 40px;
