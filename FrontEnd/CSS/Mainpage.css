@@ -1,11 +1,7 @@
 /* Main page - Main page CSS */
 
-.navbar-brand img{
-    height: 70px;
-    width: auto;
- 
-    
-}
+
+
 body{
     background-color: black;
 }
@@ -27,7 +23,7 @@ body{
 
 .nav-link{
     color: #BFA437;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -48,10 +44,17 @@ body{
 
 }
 
-.img {
+.navbar-brand img {
+    height: 60px; 
+    width: auto;
+}
+
+
+
+/* .img {
     width: 100%;
     height: 100%;
-}
+} */
 
 
 
@@ -88,8 +91,15 @@ body{
   @media (max-width: 576px) {
     .display-3{
       font-size: 1.5rem !important;
-      margin-left: -1.1em;
+      margin-left: -1.5em !important;; 
     }
+
+    .navbar-brand img {
+        height: 30px !important;; 
+        width: auto !important;;
+    }
+    
+    
   }
 
 
@@ -102,6 +112,7 @@ body{
    background-repeat: no-repeat;
    background-size: cover;
    padding-top: 50%;
+   height: 100%; /
 }
 
 .p-3  ::after{

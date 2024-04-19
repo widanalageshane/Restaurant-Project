@@ -6,5 +6,5 @@ const login_link = document.querySelector('a#login-link');
 
 user.logout();
 
-login_link.innerHTML='Login';
+login_link.innerHTML='<i class="fa-solid fa-user"></i>';
 login_link.href='logIn.html';
