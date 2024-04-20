@@ -1,6 +1,7 @@
 
 import { MenuCard } from './CLASS/menucard.js';
 import { BACKEND_URL } from './config.js'
+import { getLikeCount, addLike, getCommentCount } from './functionLikeComment.js';
 
 //const BACKEND_URL = 'http://localhost:3001'
 const menuCard = new MenuCard(BACKEND_URL);
@@ -8,49 +9,19 @@ const menuCard = new MenuCard(BACKEND_URL);
 //1.This is for getPost---- catch the card section div in which we want to add the card divs
 const menu_div = document.getElementById("menu_card");
 
-//obtaining the account_id from the session storage
+//obtaining the current logged "account_id" from the session storage................
 const userDataString = sessionStorage.getItem('user');
 const userDataObject = JSON.parse(userDataString);
 //console.log(userDataObject);
 const account_id = userDataObject.account_id;
 
-//get comment count for menu_id
-async function getCommentCount(id) {
-    const response = await fetch('http://localhost:3001/comment/count/' + id);
-    const json = await response.json();
-    //console.log(json);
-    return json;
-  }
-
-//get like count for menu_id
-async function getLikeCount(id) {
-    const response = await fetch('http://localhost:3001/like/' + id);
-    const json = await response.json();
-    //console.log(json);
-    return json;
-  }
-
-// addnew like to the like_count table
- async function addLike(menu_id, account_id) {
-    return new Promise(async(resolve, reject) => {
-        const json = JSON.stringify({menu_id: menu_id, account_id: account_id });
-        fetch('http://localhost:3001/like/new',{
-            method: 'post',
-            headers: {'Content-Type': 'application/json'},
-            body: json
-         })
-        .then((response) => response.json())
-        .then((json) => {
-            resolve(json);
-        })
-    })
-}
 
 
 
 
-  
+ 
 
+//.................render_menu function...............................................
 const render_menu = (nodes) => {
            // create 1st div in card section  
            const card_div = menu_div.appendChild(document.createElement('div'));
