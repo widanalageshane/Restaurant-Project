@@ -17,8 +17,6 @@ body{
 
 
 
-
-
 /* Menu page - Nav Bar CSS */
 
 .container-fluid {
@@ -62,6 +60,42 @@ body{
     color: #BFA437;
    margin-left: 30%;
 }
+
+
+/* content */
+
+h1{
+    color: #BFA437;
+    font-size: 2rem;
+    margin-top: -10%;
+    margin-left: -10%;
+}
+
+
+h2{
+    color: #BFA437;
+    font-size: 1.5rem;
+    margin-top: 10%;
+    margin-left: -10%;
+}
+
+.logoutalert a{
+    color: #BFA437;
+    font-size: 1rem;
+    margin-top: 10%;
+    margin-left: -10%;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
 
 
   
