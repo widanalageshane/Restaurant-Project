@@ -64,15 +64,12 @@ insert into comment(comment_text,menu_id,account_id) values ('Wow Its really nic
 
 - like table
 
-create table like_count (
-  like_id serial primary key,
-  menu_id int not null,
-    constraint fk_menu
-      foreign key (menu_id)
-        references menu(menu_id),
-  account_id int not null,
-    constraint fk_account
-      foreign key (account_id)
-        references account(account_id)
-)
+CREATE TABLE like_count (
+    like_id SERIAL PRIMARY KEY,
+    menu_id INT NOT NULL,
+    account_id INT NOT NULL,
+    CONSTRAINT fk_menu FOREIGN KEY (menu_id) REFERENCES menu(menu_id),
+    CONSTRAINT fk_account FOREIGN KEY (account_id) REFERENCES account(account_id),
+    UNIQUE (menu_id, account_id)
+);
 

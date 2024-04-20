@@ -126,6 +126,14 @@ menuRouter.get("/like/:id", async (req, res) => {
 //add like to database
 menuRouter.post("/like/new", async (req, res) => {
     try {
+        // Check if the user has already liked the menu item
+        const existingLike = await query('SELECT * FROM likes WHERE menu_id = $1 AND account_id = $2', [req.body.menu_id, req.body.account_id]);
+        if (existingLike.rows.length > 0) {
+            return res.status(400).json({ error: 'You have already liked this menu item' });
+        }
+
+        // If the user hasn't liked the menu item yet, add the like
+
         const sql = 'insert into like_count(menu_id,account_id) values ($1,$2) returning *'
         const result = await query(sql, [req.body.menu_id, req.body.account_id]);
         res.status(200).json(result.rows[0]);
