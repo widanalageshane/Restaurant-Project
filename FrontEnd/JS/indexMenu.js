@@ -13,7 +13,13 @@ const menu_div = document.getElementById("menu_card");
 const userDataString = sessionStorage.getItem('user');
 const userDataObject = JSON.parse(userDataString);
 //console.log(userDataObject);
-const account_id = userDataObject.account_id;
+//const account_id = userDataObject.account_id;
+if (userDataString !== null) {
+    const userDataObject = JSON.parse(userDataString);
+    const account_id = userDataObject.account_id;
+} else {
+    const account_id = null;
+};
 
 
 
@@ -70,7 +76,7 @@ const render_menu = (nodes) => {
             likeButton.addEventListener('click', () => {
                 likeButton.classList.toggle('liked');
                 const menu1_id = nodes.getId();
-                addLike(menu1_id, account_id)
+                addLike(menu1_id, userDataObject.account_id)
                 .then(() => {
                     getLikeCount(nodes.getId())
                     .then((likejson2) => {
@@ -119,5 +125,15 @@ const getPosts = () => {
 
 //---------------------------getPost() end here- Totally works------------------------------------------
 
-
-getPosts();
+// need to load the menu only if the user is logged in
+if (userDataObject !== null) {
+    getPosts();
+} else {
+    //alert("You have to logging to view the menu");
+    const card_div = menu_div.appendChild(document.createElement('div'));
+    card_div.setAttribute('class', 'cardnotLoging');
+    const class_div =card_div.appendChild(document.createElement('div'));
+    const h5 = class_div.appendChild(document.createElement('h5'));
+    h5.setAttribute('class', "card-error_notlogin");
+    h5.innerHTML = "You have to login to view the menu";
+}

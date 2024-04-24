@@ -33,7 +33,7 @@ const renderLink = (li, id) => {
     // -----------deleting function------ in admin page menu items
     a.addEventListener('click', (event) => {
         menuCard.removeTask(id)
-        alert("deleted")
+        //alert("deleted")
         // .then((id) => {
         //     const li_to_remove = document.querySelector(`[data-key='${id}']`);
         //         if (li_to_remove) {
