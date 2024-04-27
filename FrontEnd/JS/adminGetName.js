@@ -34,7 +34,7 @@ const renderLink = (li, id) => {
             await menuCard.removeTask(id);
             alert("Menu Deleted Successfully!");
             //need to refres the page to see the changes
-            //window.location.href="adminMenu.html"
+            window.location.href="AdminPost.html"
 
         } catch (error) {
             alert(error);
