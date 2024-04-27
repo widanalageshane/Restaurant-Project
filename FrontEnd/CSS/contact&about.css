@@ -13,12 +13,6 @@ body{
 }
 
 
-
-
-
-
-
-
 /* Nav Bar CSS  start*/
 
 .container-fluid {
@@ -57,6 +51,13 @@ body{
 
 
 /*  aboutus content */
+
+.aboutuscontent {
+    background-color: black;
+    color: #aeadaa;
+    margin-bottom: 10%;
+    text-align: center;
+}
 
 .aboutustext h1 {
     color: #aeadaa;
@@ -113,20 +114,21 @@ body{
 /*  footer CSS */
  
 
-.footernav {
-    justify-content: center;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-   
 
+.footernav {
+    margin-top: 10px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    opacity: 90%;
 }
+
 
 .details{
     line-height: 20%;
     color: #BFA437;
     margin-bottom: 00px;
-    
 
 }
 .col-4 {
