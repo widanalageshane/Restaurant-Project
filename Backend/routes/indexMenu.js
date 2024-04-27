@@ -55,7 +55,11 @@ menuRouter.delete("/delete/:id", async (req, res) => {
     const id = Number(req.params.id);    
     try {
         //const sql= 'DELETE FROM menu WHERE menu_id = $1';
-        const result = await query('delete from menu where menu_id = $1', [id]);
+        
+        const result1 = await query('delete from comment where menu_id = $1', [id]);
+        const result2 = await query('delete from like_count where menu_id = $1', [id]);
+        const result3 = await query('delete from menu where menu_id = $1', [id]);
+
 
         res.status(200).json({id:id});
 

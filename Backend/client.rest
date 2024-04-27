@@ -16,7 +16,7 @@ Content-Type: application/json
 
 ### Delete post
 
-DELETE http://localhost:3001/delete/73
+DELETE http://localhost:3001/delete/103
 
 
 

@@ -27,20 +27,18 @@ const renderLink = (li, id) => {
     // creating ----deletie icon --- in admin page menu items
     const a = li.appendChild(document.createElement('a'));
     a.innerHTML = '<i id="delete_icon" class="fas fa-trash-alt">';
- 
 
-    
     // -----------deleting function------ in admin page menu items
-    a.addEventListener('click', (event) => {
-        menuCard.removeTask(id)
-        //alert("deleted")
-        // .then((id) => {
-        //     const li_to_remove = document.querySelector(`[data-key='${id}']`);
-        //         if (li_to_remove) {
-        //             menu_list.removeChild(li_to_remove);
-        //         };
-       // }).catch((error) => {
-         //   alert(error);
+    a.addEventListener('click', async (event) => {
+        try {
+            await menuCard.removeTask(id);
+            alert("Menu Deleted Successfully!");
+            //need to refres the page to see the changes
+            //window.location.href="adminMenu.html"
+
+        } catch (error) {
+            alert(error);
+        }
     });
    // });
             
