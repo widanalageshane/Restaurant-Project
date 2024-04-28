@@ -5,6 +5,7 @@ const username_input = document.querySelector('#username')
 const email_input = document.querySelector('#user-email')
 const password_input = document.querySelector('#password')
 const submit_button = document.querySelector('#signup-button')
+const message_element = document.querySelector('#message');
 
 submit_button.addEventListener('click',(event) => {
     event.preventDefault()
@@ -14,7 +15,11 @@ submit_button.addEventListener('click',(event) => {
     
 
     user.register(username ,email, password).then(user => {
-      alert("registered successful!");
+      message_element.style.display = 'block';;
+      username_input.value = '';
+      email_input.value = '';
+      password_input.value = '';
+
       }).catch(error => {
         alert(error)
       })

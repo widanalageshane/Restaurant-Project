@@ -5,6 +5,7 @@ body{
     
 }
 
+
 .container-fluid {
     background-color: black;
     height: auto;
@@ -13,7 +14,7 @@ body{
 
 .nav-link{
     color: #BFA437;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -31,13 +32,13 @@ body{
     margin-left: 9px;
     margin-top: 5px; /* changed */
     margin-right: 20px;
-
 }
 
-.img {
-    width: 100%;
-    height: 100%;
+.navbar-brand img {
+    height: 60px; 
+    width: auto;
 }
+
 
 /* login */
 
@@ -81,6 +82,32 @@ a{
 
 /* register */
 
+.alert{
+    color: #000000;
+    background-color: rgb(214, 219, 217);
+    border: 1px solid white;
+    max-width: 30%;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+}
+
+.reg{
+    margin-top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 
 .footer {
@@ -115,3 +142,5 @@ a{
     opacity: 90%;
     font-size: 0.95rem;
 }
+
+*/
