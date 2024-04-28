@@ -64,6 +64,11 @@ body{
 
 /* content */
 
+.logout{
+    margin-top: 20%;
+    
+}
+
 h1{
     color: #BFA437;
     font-size: 2rem;
@@ -99,19 +104,24 @@ h2{
 
 
   
-/* Menu page - footer CSS */
+/* footer CSS */
  
 
 
-.footersection{
-    margin-top: 15%;
+.footernav {
+    margin-top: 20%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    opacity: 90%;
 }
+
 
 .details{
     line-height: 20%;
     color: #BFA437;
     margin-bottom: 00px;
-    
 
 }
 .col-4 {
@@ -129,7 +139,6 @@ h2{
     opacity: 90%;
     font-size: 0.95rem;
 }
-
 
 
 
