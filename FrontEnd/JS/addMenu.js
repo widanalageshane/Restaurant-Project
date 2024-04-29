@@ -31,7 +31,7 @@ button_done.onclick = (event) => {
 
     const name = input_name.value.trim();
     const description = input_description.value.trim();
-    const price = input_price.value.trim();
+    const price = "Price  "+input_price.value.trim()+" €"
     //const image1 = image.files[0].name;
     //console.log("images name"+ image1);
     // get the const image , the image file from input_image field
