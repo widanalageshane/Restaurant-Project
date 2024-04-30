@@ -97,7 +97,7 @@ const input = document.getElementById("comment_add");
 
 
 submit_buttn.addEventListener('click', (event) => {
-    alert("New comment added successfully!");
+    //alert("New comment added successfully!");
 
     //if press Enter key then add new task. ("if" for the task not empty)  
             event.preventDefault()

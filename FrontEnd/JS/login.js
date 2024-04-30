@@ -18,10 +18,10 @@ document.querySelector('#login-button').addEventListener('click', (event) => {
   .then(user => {
     if (email === "admin@gmail.com") {
       window.location.href = "MainPageAdmin.html";
-      alert("Login successful!");
+      // alert("Login successful!");
     } else {
     window.location.href = "MainPage.html";
-    alert("Login successful!");
+    // alert("Login successful!");
     }
   }).catch(error => {
     alert(error);

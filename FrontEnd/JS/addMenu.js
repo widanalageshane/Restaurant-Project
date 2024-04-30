@@ -58,7 +58,7 @@ button_done.onclick = (event) => {
             //console.log(menu);
             window.location.href="indexMenu.html"
             //render_menu(menu);
-            alert('Menu added successfully');
+            // alert('Menu added successfully');
             //console.log(menu);
         }).catch(error => {
             alert(error)

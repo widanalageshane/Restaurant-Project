@@ -32,7 +32,7 @@ const renderLink = (li, id) => {
     a.addEventListener('click', async (event) => {
         try {
             await menuCard.removeTask(id);
-            alert("Menu Deleted Successfully!");
+            //alert("Menu Deleted Successfully!");
             //need to refres the page to see the changes
             window.location.href="AdminPost.html"
 

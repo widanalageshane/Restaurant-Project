@@ -297,13 +297,15 @@ header {
 }
 
 .alert{
-    color: #000000;
-    background-color: rgb(26, 197, 129);
+    margin-top: -35%;
+    color: #f8f1f1;
+    background-color: rgb(7, 133, 83,0.4);
     border: 1px solid white;
-    max-width: 30%;
+    max-width: 50%;
     margin-left: auto; 
     margin-right: auto;
     text-align: center;
+    z-index: 10000;
 }
 
 .reg{
